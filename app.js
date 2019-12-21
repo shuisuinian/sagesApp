@@ -10,6 +10,23 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        wx.request({
+          url:  this.globalData.URL+"/user/getAllUser",
+          data: {},
+          method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+          // header: {}, // 设置请求的 header
+          success: function(res){
+            // success
+            console.log(res);
+          },
+          fail: function() {
+            // fail
+            console.log(url);
+          },
+          complete: function() {
+            // complete
+          }
+        })
       }
     })
     // 获取用户信息
@@ -34,6 +51,7 @@ App({
     })
   },
   globalData: {
+    URL:'http://127.0.0.1:8080/api',
     userInfo: null
   }
 })

@@ -1,4 +1,8 @@
 /**index.wxss**/
+view{
+  /* 使用主题颜色 */
+  color: var(--themeColor)
+}
 .userinfo {
   display: flex;
   flex-direction: column;
