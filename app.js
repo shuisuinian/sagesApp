@@ -9,24 +9,23 @@ App({
     // 登录
     wx.login({
       success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId oZ7iB4namu9ite1eeLdD9ZnkBtXM
+        console.log(res.code);
         wx.request({
-          url:  this.globalData.URL+"/user/getAllUser",
-          data: {},
-          method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-          // header: {}, // 设置请求的 header
-          success: function(res){
-            // success
-            console.log(res);
+          url: this.globalData.URL+"/user/login",
+          data: {
+            code:res.code
           },
-          fail: function() {
-            // fail
-            console.log(url);
+          header: {'content-type': 'application/x-www-form-urlencoded'},
+          method: 'POST',
+          // dataType: 'json',
+          // responseType: 'text',
+          success: (result)=>{
+            console.log(result)
           },
-          complete: function() {
-            // complete
-          }
-        })
+          fail: ()=>{},
+          complete: ()=>{}
+        });
       }
     })
     // 获取用户信息
