@@ -44,6 +44,12 @@
         "selectedIconPath": "icons/cart-Selected.png"
       },
       {
+        "pagePath": "pages/cart/index",
+        "text": "购物车",
+        "iconPath": "icons/cart.png",
+        "selectedIconPath": "icons/cart-Selected.png"
+      },
+      {
         "pagePath": "pages/user/index",
         "text": "我的",
         "iconPath": "icons/my.png",
