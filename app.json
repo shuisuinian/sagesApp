@@ -29,7 +29,7 @@
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "icons/home.png",
-        "selectedIconPath": "icons/home-Selected (2).png"
+        "selectedIconPath": "icons/home-Selected.png"
       },
       {
         "pagePath": "pages/category/index",
